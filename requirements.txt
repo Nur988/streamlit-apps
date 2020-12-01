@@ -1,0 +1,5 @@
+streamlit== 0.71.0                 
+streamlit-pandas-profiling== 0.0.6
+sweetviz==1.1.2
+pandas==1.1.4                   
+pandas-profiling==1.4.1
