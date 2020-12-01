@@ -6,7 +6,7 @@ import streamlit.components.v1 as components
 import ht
 from streamlit_pandas_profiling import st_profile_report
 import sweetviz as sv
-import matplotlib
+
 import os
 
 
@@ -38,8 +38,8 @@ def main():
             if st.button("Generate Sweetviz Report"):
                 report=sv.analyze(df)
                 a=report.show_html
-                st_display_sweetviz("SWEETVIZ_REPORT.html")
-                os.remove("SWEETVIZ_REPORT.html")
+                
+                
 
     elif choice=='About Me':
         st.subheader("About Me")
