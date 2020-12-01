@@ -6,8 +6,9 @@ import streamlit.components.v1 as components
 import ht
 from streamlit_pandas_profiling import st_profile_report
 import sweetviz as sv
-
+import matplotlib
 import os
+from PIL import Image
 
 
 def st_display_sweetviz(report_html,width=1000,height=500):
@@ -22,7 +23,7 @@ def st_display_sweetviz(report_html,width=1000,height=500):
 
 def main():
     menu=['Home','Pandas Profiling','SweetViz','About Me']
-    choice=st.sidebar.selectbox("MENU",menu)
+    choice=st.sidebar.radio("MENU",menu)
     if choice=='Pandas Profiling':
         st.subheader("Pandas Profile")
         data_file=st.file_uploader("Upload Csv",type=['csv'])
@@ -38,17 +39,25 @@ def main():
             if st.button("Generate Sweetviz Report"):
                 report=sv.analyze(df)
                 a=report.show_html
-                
-                
+                st_display_sweetviz("SWEETVIZ_REPORT.html")
+                os.remove("SWEETVIZ_REPORT.html")
 
     elif choice=='About Me':
         st.subheader("About Me")
         components.html(ht.about,height=1200,width=1000)
     else :
-        
+        #HtmlFile = open("index.html", 'r', encoding='utf-8')
+        #source_code = HtmlFile.read() 
+
+        #components.html(source_code,height=800,width=800)
         #st.header("WELCOME TO MY WEBSITE")
-        components.html(ht.bootstrap,height=300,width=800)
-        components.html(ht.header,height=100,width=800)           
+        image = Image.open('laptop.jpg')
+        components.html(ht.header2,height=150,width=800)
+        #st.title("WELCOME TO MY WEBSITE")
+        st.image(image,width=800)
+
+        components.html(ht.header3,height=1500,width=800)
+                   
 
 
 if __name__=='__main__':
