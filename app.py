@@ -43,10 +43,12 @@ def main():
                 os.remove("SWEETVIZ_REPORT.html")
 
     elif choice=='About Me':
+        st.set_page_config(layout='centered',initial_sidebar_state='collapsed')
         st.subheader("About Me")
         image=Image.open('cv.jpg')
-        st.image(image,height=1000,width=1000)
+        st.image(image,height=1000,width=800)
     else :
+        st.set_page_config(layout='wide',initial_sidebar_state='collapsed')
         #HtmlFile = open("index.html", 'r', encoding='utf-8')
         #source_code = HtmlFile.read() 
 
