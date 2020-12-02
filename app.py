@@ -10,7 +10,7 @@ import matplotlib
 import os
 from PIL import Image
 
-st.set_page_config(layout='centered',initial_sidebar_state='collapsed')
+st.set_page_config(layout='wide',initial_sidebar_state='collapsed')
 def st_display_sweetviz(report_html,width=1000,height=500):
     report_file=codecs.open(report_html,'r')
     page=report_file.read()
