@@ -43,22 +43,22 @@ def main():
                 os.remove("SWEETVIZ_REPORT.html")
 
     elif choice=='About Me':
-        st.set_page_config(layout='centered',initial_sidebar_state='collapsed')
+        
         st.subheader("About Me")
         image=Image.open('cv.jpg')
-        st.image(image,height=1000,width=800)
+        st.image(image,height=1000,width=1200)
     else :
-        st.set_page_config(layout='wide',initial_sidebar_state='collapsed')
+        
         #HtmlFile = open("index.html", 'r', encoding='utf-8')
         #source_code = HtmlFile.read() 
 
         #components.html(source_code,height=800,width=800)
         #st.header("WELCOME TO MY WEBSITE")
         image = Image.open('1.jpg')
-        components.html(ht.header2,height=150,width=1500)
+        components.html(ht.header2,height=150,width=1200)
         #st.title("WELCOME TO MY WEBSITE")
-        st.image(image,width=1500)
-        components.html(ht.header3,height=1500,width=1500)
+        st.image(image,width=1200)
+        components.html(ht.header3,height=1500,width=1200)
         
                    
 
