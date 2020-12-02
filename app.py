@@ -53,10 +53,10 @@ def main():
         #components.html(source_code,height=800,width=800)
         #st.header("WELCOME TO MY WEBSITE")
         image = Image.open('1.jpg')
-        components.html(ht.header2,height=150,width=800)
+        components.html(ht.header2,height=150,width=1500)
         #st.title("WELCOME TO MY WEBSITE")
-        st.image(image,width=800)
-        components.html(ht.header3,height=1500,width=800)
+        st.image(image,width=1500)
+        components.html(ht.header3,height=1500,width=1500)
         
                    
 
