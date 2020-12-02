@@ -10,7 +10,7 @@ import matplotlib
 import os
 from PIL import Image
 
-
+st.set_page_config(layout='wide',initial_sidebar_state='collapsed')
 def st_display_sweetviz(report_html,width=1000,height=500):
     report_file=codecs.open(report_html,'r')
     page=report_file.read()
@@ -44,7 +44,8 @@ def main():
 
     elif choice=='About Me':
         st.subheader("About Me")
-        components.html(ht.about,height=1200,width=1000)
+        image=Image.open('cv.jpg')
+        st.image(image,height=1000,width=1000)
     else :
         #HtmlFile = open("index.html", 'r', encoding='utf-8')
         #source_code = HtmlFile.read() 
@@ -52,11 +53,10 @@ def main():
         #components.html(source_code,height=800,width=800)
         #st.header("WELCOME TO MY WEBSITE")
         image = Image.open('laptop.jpg')
-        components.html(ht.header2,height=150,width=800)
+        components.html(ht.header2,height=150,width=1500)
         #st.title("WELCOME TO MY WEBSITE")
-        st.image(image,width=800)
-
-        components.html(ht.header3,height=1500,width=800)
+        st.image(image,width=1500)
+        
                    
 
 
