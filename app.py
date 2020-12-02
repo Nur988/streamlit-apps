@@ -56,7 +56,7 @@ def main():
         components.html(ht.header2,height=150,width=1500)
         #st.title("WELCOME TO MY WEBSITE")
         st.image(image,width=1500)
-        components.html(ht.header3,height=1000,width=1500)
+        components.html(ht.header3,height=1500,width=1500)
         
                    
 
