@@ -22,30 +22,14 @@ def st_display_sweetviz(report_html,width=1000,height=500):
 
 
 def main():
-    menu=['Home','Pandas Profiling','SweetViz','About Me']
+    menu=['Home','Eda','NLP','About Me']
     choice=st.sidebar.radio("MENU",menu)
-    if choice=='Pandas Profiling':
-        st.subheader("Pandas Profile")
-        data_file=st.file_uploader("Upload Csv",type=['csv'])
-        if data_file is not None:
-            df=pd.read_csv(data_file)
-            st.dataframe(df.head())
-            st.title("Pandas Profiling in Streamlit")
-            st.write(df)
-            pr = ProfileReport(df)
-            st_profile_report(pr)
-
-    elif choice=='SweetViz':
-        st.subheader("SweetViz")
-        data_file=st.file_uploader("Upload",type=['csv'])
-        if data_file is not None:
-            df=pd.read_csv(data_file)
-            st.dataframe(df.head())
-            if st.button("Generate Sweetviz Report"):
-                report=sv.analyze(df)
-                a=report.show_html
-                st_display_sweetviz("SWEETVIZ_REPORT.html")
-                os.remove("SWEETVIZ_REPORT.html")
+    if choice=='Eda':
+        st.subheader("EDA")
+        eda.eda()
+    elif choice=='NLP':
+        NLP.NLP()
+        
 
     elif choice=='About Me':
         
