@@ -9,6 +9,8 @@ import sweetviz as sv
 import matplotlib
 import os
 from PIL import Image
+import eda
+import NLP
 
 st.set_page_config(layout='wide',initial_sidebar_state='collapsed')
 def st_display_sweetviz(report_html,width=1000,height=500):
