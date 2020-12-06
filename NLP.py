@@ -16,7 +16,7 @@ def NLP():
         summary_list=[str(s) for s in summary]
         result=' '.join(summary_list)
         return result
-
+    st.text("Below You can Enter Any Text and Then Choose a Summarizer to get a Summary of the Entered Text")
     message=st.text_area("Enter Text Here","Type Here...")  
     options=st.selectbox("Choose Summarizer",['sumy','gensim'])
     if st.button("Summarize"):
