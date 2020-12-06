@@ -32,7 +32,7 @@ def main():
             st.dataframe(df.head())
             st.title("Pandas Profiling in Streamlit")
             st.write(df)
-            pr = ProfileReport(df, explorative=True)
+            pr = ProfileReport(df)
             st_profile_report(pr)
 
     elif choice=='SweetViz':
