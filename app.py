@@ -30,6 +30,11 @@ def main():
         if data_file is not None:
             df=pd.read_csv(data_file)
             st.dataframe(df.head())
+            st.title("Pandas Profiling in Streamlit")
+            st.write(df)
+            pr = ProfileReport(df, explorative=True)
+            st_profile_report(pr)
+st_profile_report(pr)
     elif choice=='SweetViz':
         st.subheader("SweetViz")
         data_file=st.file_uploader("Upload",type=['csv'])
