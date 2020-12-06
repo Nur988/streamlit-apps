@@ -34,7 +34,7 @@ def main():
             st.write(df)
             pr = ProfileReport(df, explorative=True)
             st_profile_report(pr)
-st_profile_report(pr)
+
     elif choice=='SweetViz':
         st.subheader("SweetViz")
         data_file=st.file_uploader("Upload",type=['csv'])
